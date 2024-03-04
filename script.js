@@ -31,3 +31,31 @@ toggleSliderButton.addEventListener("click", function () {
   // Toggle between 'horizontal' and 'vertical' classes on the slider
   slider.classList.toggle("vertical");
 });
+
+// Get Products and Footer in the header
+const productsLink = document.querySelector(".nav-links li:nth-child(2) a");
+const contactLink = document.querySelector(".nav-links li:nth-child(3) a");
+
+// Get the section
+const productsSection = document.querySelector(".product-showcase");
+const footerSection = document.querySelector("footer");
+
+//click the Products link
+productsLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default link behavior
+
+  // Scroll to the products section
+  productsSection.scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+//click the Contact link
+contactLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default link behavior
+
+  // Scroll to the footer section
+  footerSection.scrollIntoView({
+    behavior: "smooth",
+  });
+});
